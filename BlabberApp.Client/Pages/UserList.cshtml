@@ -1,0 +1,21 @@
+@page
+@model BlabberApp.Client.Pages.UserListModel
+@using BlabberApp.Domain
+@using BlabberApp.Services
+@inject IUserService UserService
+@{
+    ViewData["Title"] = "User List";
+}
+
+
+<section id="main">
+    <h1>List</h1>
+    <div id="List">
+            <p>
+                @foreach(@User user in @UserService.GetAllUsers()){
+                    <li>@user.Email.ToString()</li>
+                }
+            </p>
+    </div>
+</section>
+
