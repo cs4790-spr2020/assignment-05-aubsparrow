@@ -41,7 +41,7 @@ namespace BlabberApp.DataStoreTest
             foreach(User user in UserList){
                 if(user == this.user)
                 {
-                    Assert.AreEqual(true, true);
+                    Assert.AreEqual(user, this.user);
                 }
             }
         

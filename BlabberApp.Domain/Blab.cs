@@ -5,7 +5,7 @@ namespace BlabberApp.Domain
     public class Blab : IDatum
     {
        public Guid Id{get; set;}
-       public DateTime DateTime{get;}
+       public DateTime DateTime{get; set;}
        public string Message {get; set;}
        public User user {get; set;}
 

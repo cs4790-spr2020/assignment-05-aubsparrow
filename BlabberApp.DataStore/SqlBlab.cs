@@ -6,7 +6,7 @@ using BlabberApp.Domain;
 
 namespace BlabberApp.DataStore
 {
-    public class SqlBlab : IBlabPlugin
+    public class SqlBlab : IBlabPlugin, IPlugin
     {
         private MySqlConnection connection;
 
@@ -35,7 +35,7 @@ namespace BlabberApp.DataStore
             try
             {
                 DateTime DTTMNow = DateTime.Now;
-                string sql = "INSERT INTO Blab (SysID, Message, CreatedDTTM, UserID) VALUES'"
+                string sql = "INSERT INTO Blab (SysID, Message, CreatedDTTM, UserID) VALUES('"
                     + blab.Id + "', '" 
                     + blab.Message + "', '"
                     + DTTMNow.ToString("yyyy-MM-dd HH:mm:ss") + "', '"
@@ -60,13 +60,7 @@ namespace BlabberApp.DataStore
                 DataSet BlabSet = new DataSet();
 
                 adapterBlab.Fill(BlabSet);
-                ArrayList BlabList = new ArrayList();
-                
-                foreach(DataRow row in BlabSet.Tables[0].Rows)
-                {
-                    BlabList.Add(row);
-                }
-                return (IDatum)BlabList; 
+                return convertRowToBlab(BlabSet.Tables[0].Rows[0]);
             }
             catch(Exception ex)
             {
@@ -88,7 +82,7 @@ namespace BlabberApp.DataStore
 
             foreach(DataRow row in BlabSet.Tables[0].Rows)
             {
-                listBlabs.Add(row);
+                listBlabs.Add(convertRowToBlab(row));
             }
             return listBlabs;
         }
@@ -118,7 +112,27 @@ namespace BlabberApp.DataStore
 
         public void Delete(IDatum obj)
         {
-            return;
+            try
+            {
+                string DeleteSQL = "DELETE FROM Blab WHERE SysID = '" + obj.Id + "'";
+                MySqlCommand cmd = new MySqlCommand(DeleteSQL, connection);
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw new Exception(ex.ToString());
+            }
+        }
+
+        private Blab convertRowToBlab(DataRow row)
+        {
+            Blab blab = new Blab();
+            blab.Id = new Guid(row["SysID"].ToString());
+            blab.Message = row["Message"].ToString();
+            blab.DateTime = (DateTime)row["CreatedDTTM"];
+            
+            return blab;
         }
 
 
