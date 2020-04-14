@@ -7,6 +7,7 @@ namespace BlabberApp.DomainTest
     [TestClass]
     public class UserTest
     {
+    
         [TestMethod]
         public void TestSetEmailNewUser()
         {
@@ -18,38 +19,36 @@ namespace BlabberApp.DomainTest
             Assert.AreEqual(actual, email);
         }
 
-        // [TestMethod]
-        // public void TestGetUserID_Fail_0()
-        // {
-        //     //arrange
-        //     User harness = new User();
-        //     //act
-        //     var ex = Assert.ThrowsException<FormatException>(() => harness.ChangeEmail("foobar"));
-        //     //assert
-        //     Assert.AreEqual("Email Invalid", ex.Message);
-        // }
+        [TestMethod]
+        public void TestChangeEmail_Fail00()
+        {
+            //arrange
+            User harness = new User();
+            //act
+            var ex = Assert.ThrowsException<FormatException>(() => harness.ChangeEmail("foobar"));
+            //assert
+            Assert.AreEqual("Email Invalid", ex.Message);
+        }
 
-        // [TestMethod]
-        // public void TestGetUserID_Fail_1()
-        // {
-        //      // Arrange
-        //     User harness = new User(); 
-        //     // Act
-        //     var ex = Assert.ThrowsException<FormatException>(() => harness.ChangeEmail("foobar.example"));
-        //     // Assert
-        //     Assert.AreEqual("Email Invalid", ex.Message.ToString());
-        // }
+        [TestMethod]
+        public void TestGetUserID_Fail_01()
+        {
+             // Arrange
+            User harness = new User(); 
+            // Act
+            var ex = Assert.ThrowsException<FormatException>(() => harness.ChangeEmail("foobar.example"));
+            // Assert
+            Assert.AreEqual("Email Invalid", ex.Message.ToString());
+        }
 
-        //  [TestMethod]
-        // public void TestGetSysId()
-        // {
-        //     User harness = new User();
-        //     string expected = harness.getSysId();
-        //     //act & assert
-        //     string actual = harness.getSysId();
-        //     Assert.AreEqual(actual, expected);
-        //     Assert.IsInstanceOfType(harness.getSysId(), typeof(string));
-        // }
+         [TestMethod]
+         public void TestChangeEmailExistingUser()
+         {
+             User user = new User("foobar@example.com");
+             string newEmail = "barfoo@example.com";
+             user.ChangeEmail(newEmail);
+            Assert.AreEqual(newEmail, user.Email);
+         }
 
 
     }
