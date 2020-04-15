@@ -44,8 +44,14 @@ namespace BlabberApp.DataStoreTest
                     Assert.AreEqual(user, this.user);
                 }
             }
-        
+        }
 
+        [TestMethod]
+        public void TestGetByEmail()
+        {
+            adapterHarness.Add(user);
+            User actual = adapterHarness.GetUserByEmail(user.Email);
+            Assert.AreEqual(user.Id, actual.Id);
         }
     }
 }

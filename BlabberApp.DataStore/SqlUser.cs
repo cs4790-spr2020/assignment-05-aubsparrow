@@ -6,7 +6,7 @@ using BlabberApp.Domain;
 
 namespace BlabberApp.DataStore
 {
-    public class SqlUser : IPlugin
+    public class SqlUser : IPlugin, IUserPlugin
     {
         MySqlConnection connection;
         public SqlUser()
@@ -112,7 +112,7 @@ namespace BlabberApp.DataStore
             }
         } 
 
-        public IDatum GetUserByEmail(string email)
+        public User GetUserByEmail(string email)
         {
             try
             {

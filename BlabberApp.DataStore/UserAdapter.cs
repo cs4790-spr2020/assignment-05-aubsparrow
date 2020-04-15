@@ -6,9 +6,9 @@ namespace BlabberApp.DataStore
 {
     public class UserAdapter
     {
-        private readonly IPlugin UserPlugin;
+        private readonly IUserPlugin UserPlugin;
 
-        public UserAdapter(IPlugin plugin)
+        public UserAdapter(IUserPlugin plugin)
         {
             UserPlugin = plugin;
         }
@@ -33,6 +33,10 @@ namespace BlabberApp.DataStore
             UserPlugin.Delete(user);
         }
 
+        public User GetUserByEmail(string email)
+        {
+            return UserPlugin.GetUserByEmail(email);
+        }
         
 
     }

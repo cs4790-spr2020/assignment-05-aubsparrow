@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace BlabberApp.DataStore
 {
-    public class InMemory : IBlabPlugin, IPlugin
+    public class InMemory : IBlabPlugin, IUserPlugin
     {
         private ArrayList lstBuffer;
         public InMemory()
@@ -49,7 +49,7 @@ namespace BlabberApp.DataStore
             return null;
         }
 
-        public IDatum GetUserByEmail(string email)
+        public User GetUserByEmail(string email)
         {
             foreach(User user in lstBuffer)
             {
