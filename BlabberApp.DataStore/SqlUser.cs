@@ -110,6 +110,28 @@ namespace BlabberApp.DataStore
                 Console.WriteLine(e.Message);
                 throw new Exception(e.ToString());
             }
+        } 
+
+        public IDatum GetUserByEmail(string email)
+        {
+            try
+            {
+                string sqlGetByEmail = "SELECT * FROM Users WHERE Users.Email = '" + email + "'";
+                MySqlDataAdapter adapterUser = new MySqlDataAdapter(sqlGetByEmail, connection); 
+                MySqlCommandBuilder commandUser = new MySqlCommandBuilder(adapterUser);
+                DataSet setUsers = new DataSet();
+
+                adapterUser.Fill(setUsers);
+                User retrievedUser = convertRowToUesr(setUsers.Tables[0].Rows[0]);
+
+                return retrievedUser;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+                throw new Exception (ex.ToString());
+            }
         }     
 
         private User convertRowToUesr(DataRow row)

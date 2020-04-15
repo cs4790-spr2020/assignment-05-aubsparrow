@@ -49,7 +49,7 @@ namespace BlabberApp.DataStore
             return null;
         }
 
-        public IDatum ReadByEmail(string email)
+        public IDatum GetUserByEmail(string email)
         {
             foreach(User user in lstBuffer)
             {
@@ -84,6 +84,7 @@ namespace BlabberApp.DataStore
         {
             lstBuffer.Remove(obj);
         }
+
     }
     
 }
