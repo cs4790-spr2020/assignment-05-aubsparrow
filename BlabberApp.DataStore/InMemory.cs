@@ -61,12 +61,12 @@ namespace BlabberApp.DataStore
             return null;
         }
 
-        public IEnumerable ReadByUserId(string Id)
+        public IEnumerable GetBlabsByEmail(string email)
         {
             ArrayList userBlabs = new ArrayList();
             foreach(Blab blab in lstBuffer)
             {
-                if(blab.user.Email.Equals(Id))
+                if(blab.user.Email.Equals(email))
                 {
                     userBlabs.Add(blab);
                 }

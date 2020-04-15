@@ -4,7 +4,7 @@ namespace BlabberApp.Services
 {
     public class UserFactory
     {
-        public UserAdapter CreateUserAdapter(IPlugin plugin = null)
+        public UserAdapter CreateUserAdapter(IUserPlugin plugin = null)
         {
             if (plugin == null)
             {
@@ -13,7 +13,7 @@ namespace BlabberApp.Services
 
             return new UserAdapter(plugin);
         }
-        public IPlugin CreateUserPlugin(string type = "")
+        public IUserPlugin CreateUserPlugin(string type = "")
         {
             if (type.ToUpper().Equals("MYSQL"))
             {

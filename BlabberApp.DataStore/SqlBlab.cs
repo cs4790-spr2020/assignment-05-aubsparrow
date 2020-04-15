@@ -87,7 +87,7 @@ namespace BlabberApp.DataStore
             return listBlabs;
         }
         
-        public IEnumerable ReadByUserId(string email)
+        public IEnumerable GetBlabsByEmail(string email)
         {
             string sqlGetUserBlabs = "SELECT * FROM Blab Where Blab.UserID = '" + email.ToString() + "'";
             MySqlDataAdapter adapterBlabs = new MySqlDataAdapter(sqlGetUserBlabs, this.connection);

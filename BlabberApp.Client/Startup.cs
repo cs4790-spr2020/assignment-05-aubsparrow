@@ -26,7 +26,7 @@ namespace BlabberApp.Client
         public void ConfigureServices(IServiceCollection services)
         {
             UserFactory userFactory = new UserFactory();
-            IPlugin userPlugin = userFactory.CreateUserPlugin("mysql");
+            IUserPlugin userPlugin = userFactory.CreateUserPlugin("mysql");
             UserAdapter userAdapter = userFactory.CreateUserAdapter(userPlugin);
             UserService userService = userFactory.CreateUserService(userAdapter);
 

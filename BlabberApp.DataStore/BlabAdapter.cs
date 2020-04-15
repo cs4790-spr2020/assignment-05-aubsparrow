@@ -32,9 +32,9 @@ namespace BlabberApp.DataStore
             blabPlugin.Delete(blab);
         }
 
-        public IEnumerable GetByUserId(string email)
+        public IEnumerable GetByEmail(string email)
         {
-            return blabPlugin.ReadByUserId(email);
+            return blabPlugin.GetBlabsByEmail(email);
         }
     }
 }
