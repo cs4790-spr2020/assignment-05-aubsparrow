@@ -30,7 +30,7 @@ namespace BlabberApp.Services
             return null;
         }
 
-        public Blab CreateBlab(string msg, string email)
+        private Blab CreateBlab(string msg, string email)
         {
             User user = new User(email);
             return new Blab(msg, user);
