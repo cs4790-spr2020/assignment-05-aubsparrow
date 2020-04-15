@@ -19,7 +19,7 @@ namespace BlabberApp.DataStoreTest
         {
             newUser = new User(userEmail);
             newBlab = new Blab(blabMessage, newUser);
-            adapter = new BlabAdapter(new SqlBlab());
+            adapter = new BlabAdapter(new SqlBlab(), new SqlUser());
         }
 
         [TestCleanup]

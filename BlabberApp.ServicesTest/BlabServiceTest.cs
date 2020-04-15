@@ -21,8 +21,21 @@ namespace BlabberApp.ServicesTest
         [TestMethod]
         public void TetNewBlab()
         {
-            service.NewBlab(message, email );
+            //user hasn't been created yet
+            Blab blab = service.CreateBlab(message, email);
+            User newUser = new User(email);
+            Assert.AreNotEqual(newUser.Id, blab.user.Id);
             
+        }
+
+        [TestMethod]
+        public void TestNewBLabExistingUser()
+        {
+            User newUser = new User(email);
+            //user already exists, should be equal
+            service.userAdapter.Add(newUser);
+            Blab blab = service.CreateBlab(message, email);
+            Assert.AreEqual(newUser.Id, blab.user.Id);
         }
     }
 }

@@ -5,9 +5,8 @@ namespace BlabberApp.Services
     public class BlabFactory
     {
         private UserFactory userFactory = new UserFactory();
-        private IUserPlugin userPlugin;
         private UserAdapter userAdapter;
-        public BlabAdapter CreateBlabAdapter(IBlabPlugin plugin = null)
+        public BlabAdapter CreateBlabAdapter(IBlabPlugin plugin = null, IUserPlugin userPlugin = null)
         {
             if(plugin == null)
             {
@@ -15,7 +14,7 @@ namespace BlabberApp.Services
                 userPlugin = userFactory.CreateUserPlugin();
                 
             }
-            return new BlabAdapter(plugin);
+            return new BlabAdapter(plugin, userPlugin);
         }
 
         public IBlabPlugin CreateBlabPlugin(string type = "")
@@ -30,7 +29,7 @@ namespace BlabberApp.Services
             }
         }
 
-        public IBlabService CreateBlabService(BlabAdapter adpater = null)
+        public IBlabService CreateBlabService(BlabAdapter adpater = null, UserAdapter userAdapter = null)
         {
             
             if(adpater == null)

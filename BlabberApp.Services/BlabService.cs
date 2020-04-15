@@ -8,7 +8,12 @@ namespace BlabberApp.Services
     public class BlabService : IBlabService
     {
         private readonly BlabAdapter BlabAdapter;
-        private UserAdapter userAdapter;
+        public UserAdapter userAdapter;
+        public BlabService(BlabAdapter adapter, UserAdapter userAdapter)
+        {
+            BlabAdapter = adapter;
+            this.userAdapter = userAdapter;
+        }
         public void NewBlab(string message, string email)
         {
             BlabAdapter.Add(CreateBlab(message, email));
@@ -17,12 +22,6 @@ namespace BlabberApp.Services
         {
             BlabAdapter.Add(blab);
         }
-        public BlabService(BlabAdapter adapter, UserAdapter userAdapter)
-        {
-            BlabAdapter = adapter;
-            this.userAdapter = userAdapter;
-        }
-
         public IEnumerable GetAll()
         {
             return BlabAdapter.GetAll();
@@ -32,13 +31,14 @@ namespace BlabberApp.Services
             return null;
         }
 
-        private Blab CreateBlab(string msg, string email)
+        public Blab CreateBlab(string msg, string email)
         {
             User user = userAdapter.GetUserByEmail(email);
             //error scenario - user doesn't exist
             if(user == null)
             {
                 User newUser = new User(email);
+                userAdapter.Add(newUser);
                 return new Blab(msg, newUser);
             }
             else

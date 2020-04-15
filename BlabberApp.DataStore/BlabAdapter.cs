@@ -7,10 +7,12 @@ namespace BlabberApp.DataStore
     public class BlabAdapter
     {
         private IBlabPlugin blabPlugin;
+        private IUserPlugin userPlugin;
 
-        public BlabAdapter(IBlabPlugin plugin)
+        public BlabAdapter(IBlabPlugin plugin, IUserPlugin userPlugin)
         {
             blabPlugin = plugin;
+            this.userPlugin = userPlugin;
         }
 
         public void Add(Blab blab)
