@@ -26,10 +26,6 @@ namespace BlabberApp.Services
         {
             return BlabAdapter.GetAll();
         }
-        public IEnumerable GetUserBlabs(string email)
-        {
-            return null;
-        }
 
         public Blab CreateBlab(string msg, string email)
         {

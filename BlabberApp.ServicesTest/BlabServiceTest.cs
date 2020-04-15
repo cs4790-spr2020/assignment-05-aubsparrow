@@ -1,3 +1,4 @@
+using System.Collections;
 using BlabberApp.Services;
 using BlabberApp.Domain;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -37,5 +38,16 @@ namespace BlabberApp.ServicesTest
             Blab blab = service.CreateBlab(message, email);
             Assert.AreEqual(newUser.Id, blab.user.Id);
         }
+
+        [TestMethod]
+        public void TestNewBlabGetAll()
+        {
+            User newUser = new User(email);
+            Blab newblab = new Blab(message, newUser);
+            service.NewBlab(newblab);
+            CollectionAssert.Contains((ArrayList)service.GetAll(), newblab);
+
+        }
+        
     }
 }

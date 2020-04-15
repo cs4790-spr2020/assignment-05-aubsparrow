@@ -7,7 +7,6 @@ namespace BlabberApp.Services
     {
        void NewBlab(string message, string email);
        void NewBlab(Blab blab);
-       IEnumerable GetUserBlabs(string email);
        IEnumerable GetAll(); 
     }
 }

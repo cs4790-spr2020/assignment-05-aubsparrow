@@ -5,7 +5,6 @@ namespace BlabberApp.Services
     public class BlabFactory
     {
         private UserFactory userFactory = new UserFactory();
-        private UserAdapter userAdapter;
         public BlabAdapter CreateBlabAdapter(IBlabPlugin plugin = null, IUserPlugin userPlugin = null)
         {
             if(plugin == null)
