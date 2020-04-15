@@ -6,41 +6,30 @@ namespace BlabberApp.DomainTest
     [TestClass]
     public class BlabTest
     {
-        // [TestMethod]
-        // public void TestSetGetMessage()
-        // {
-        //     //arrange
-        //     Blab harness = new Blab();
-        //     string expected = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...";
-        //     harness.Message = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...";
-        //     //act
-        //     string actual = harness.Message;
-        //     //assert
-        //     Assert.AreEqual(actual, expected);
-        // }
+        private string message = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...";
 
-        // [TestMethod]
-        // public void TestSetGetUserId()
-        // {
-        //     //arrange
-        //     Blab harness = new Blab();
-        //     string expected = "foobar@example.com";
-        //     harness.UserID = "foobar@example.com";
-        //     //Act
-        //     string actual = harness.UserID;
-        //     Assert.AreEqual(actual, expected);
-        //  }
+        [TestMethod]
+        public void TestSetGetMessage()
+        {
+            //arrange
+            
+            string expected = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...";
+            Blab harness = new Blab(expected);
+            //act
+            //assert
+            Assert.AreEqual(expected, harness.Message);
+        }
 
-        // [TestMethod]
-        // public void TestGetSysId()
-        // {
-        //     Blab harness = new Blab();
-        //     string expected = harness.getSysId();
-        //     //act & assert
-        //     string actual = harness.getSysId();
-        //     Assert.AreEqual(actual, expected);
-        //     Assert.IsInstanceOfType(harness.getSysId(), typeof(string));
-        // }
+        [TestMethod]
+        public void TestBlabGetUserId()
+        {
+            //arrange
+            User blabUser = new User("foobar@example.com");
+            Blab newBlab = new Blab(message, blabUser );
+            Assert.AreEqual(blabUser.Id, newBlab.user.Id);
+        }
+
+        
 
     }
 }

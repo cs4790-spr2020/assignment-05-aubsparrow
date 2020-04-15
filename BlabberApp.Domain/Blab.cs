@@ -24,13 +24,7 @@ namespace BlabberApp.Domain
            this.DateTime = DateTime.Now;
        }
 
-       public Blab(User user)
-        {
-            this.user = user;
-            this.Message = "";
-            this.DateTime = DateTime.Now;
-        }
-
+      
         public Blab(string message, User user)
         {
             this.user = user;
