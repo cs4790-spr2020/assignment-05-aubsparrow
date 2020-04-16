@@ -10,7 +10,7 @@ namespace BlabberApp.Client.Pages
          private readonly IUserService userService;
         public UserListModel(IUserService service)
         {
-            userService = service;;
+            userService = service;
         }
         public void OnGet()
         {

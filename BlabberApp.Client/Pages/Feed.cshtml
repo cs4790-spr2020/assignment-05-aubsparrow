@@ -1,5 +1,8 @@
 @page
 @model BlabberApp.Client.Pages.FeedModel
+@using BlabberApp.Domain
+@using BlabberApp.Services
+@inject IBlabService BlabService
 @{
     ViewData["Title"] = "Feed";
 }
@@ -16,7 +19,11 @@
         </form>
     </div>
     <div id="content">
-        Feed will go here!
+        <p>
+                @foreach(@Blab blab in @BlabService.GetAll()){
+                    <li>@blab.user: @blab.Message</li>
+                }
+            </p>
     </div>
 </section>
 
