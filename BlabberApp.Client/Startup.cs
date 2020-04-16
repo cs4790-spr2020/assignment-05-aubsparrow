@@ -30,7 +30,13 @@ namespace BlabberApp.Client
             UserAdapter userAdapter = userFactory.CreateUserAdapter(userPlugin);
             UserService userService = userFactory.CreateUserService(userAdapter);
 
+            BlabFactory blabFactory = new BlabFactory();
+            IBlabPlugin blabPlugin = blabFactory.CreateBlabPlugin("mysql");
+            BlabAdapter blabAdapter = blabFactory.CreateBlabAdapter(blabPlugin, userPlugin);
+            IBlabService blabService = blabFactory.CreateBlabService(blabAdapter, userAdapter);
+
             services.AddSingleton<IUserService>(s => userService);
+            services.AddSingleton<IBlabService>(s => blabService);
             services.AddRazorPages();
         }
 

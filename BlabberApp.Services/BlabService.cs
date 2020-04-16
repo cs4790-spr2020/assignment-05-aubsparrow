@@ -14,6 +14,7 @@ namespace BlabberApp.Services
             BlabAdapter = adapter;
             this.userAdapter = userAdapter;
         }
+        
         public void NewBlab(string message, string email)
         {
             BlabAdapter.Add(CreateBlab(message, email));

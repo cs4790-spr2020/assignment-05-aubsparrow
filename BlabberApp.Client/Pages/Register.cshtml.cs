@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Linq;
 using BlabberApp.Services;
-using BlabberApp.Domain;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BlabberApp.Client.Pages

@@ -12,6 +12,7 @@ namespace BlabberApp.Domain
 
        public Blab()
        {
+           this.Id = Guid.NewGuid();
            this.user = new User();
            this.Message = "";
            this.DateTime = DateTime.Now;
@@ -19,6 +20,7 @@ namespace BlabberApp.Domain
 
        public Blab(string Message)
        {
+           this.Id = Guid.NewGuid();
            this.user = new User();
            this.Message = Message;
            this.DateTime = DateTime.Now;
@@ -27,6 +29,7 @@ namespace BlabberApp.Domain
       
         public Blab(string message, User user)
         {
+            this.Id = Guid.NewGuid();
             this.user = user;
             this.Message = message;
             this.DateTime = DateTime.Now;
