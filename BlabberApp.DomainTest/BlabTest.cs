@@ -29,6 +29,14 @@ namespace BlabberApp.DomainTest
             Assert.AreEqual(blabUser.Id, newBlab.user.Id);
         }
 
+        [TestMethod]
+        public void TestCreateBlabWithoutUser()
+        {
+            Blab newBlab = new Blab(message);
+            User fakeUser = new User();
+            Assert.AreNotEqual(newBlab.user.Id, fakeUser.Id);
+        }
+
         
 
     }

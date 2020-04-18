@@ -20,6 +20,14 @@ namespace BlabberApp.DomainTest
         }
 
         [TestMethod]
+        public void TestNewUserNoEmail()
+        {
+            User newUser = new User();
+            Guid actual = newUser.Id;
+            Assert.AreEqual(newUser.Id, actual);   
+        }
+
+        [TestMethod]
         public void TestChangeEmail_Fail00()
         {
             //arrange
