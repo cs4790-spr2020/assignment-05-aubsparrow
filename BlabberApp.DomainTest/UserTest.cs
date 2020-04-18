@@ -58,6 +58,14 @@ namespace BlabberApp.DomainTest
             Assert.AreEqual(newEmail, user.Email);
          }
 
+        [TestMethod]
+        public void TestDates()
+        {
+            User user1 = new User("foobar@example.com");
+            User user2 = new User("barfoo@example.com");
+            Assert.AreNotEqual(user1.RegisterDTTM, user2.RegisterDTTM);
+        } 
+
 
     }
 

@@ -33,8 +33,15 @@ namespace BlabberApp.DomainTest
         public void TestCreateBlabWithoutUser()
         {
             Blab newBlab = new Blab(message);
-            User fakeUser = new User();
-            Assert.AreNotEqual(newBlab.user.Id, fakeUser.Id);
+            Assert.AreEqual(message, newBlab.Message);
+        }
+
+        [TestMethod]
+        public void TestDates()
+        {  
+            Blab actual = new Blab();
+            Blab expected = new Blab();
+            Assert.AreNotEqual(actual.DateTime, expected.DateTime);
         }
 
         
