@@ -48,5 +48,19 @@ namespace BlabberApp.DataStoreTest
                 }
             }
         }
+
+        [TestMethod]
+        public void TestGetBlabsByEmail()
+        {
+            adapter.Add(newBlab);
+            ArrayList blabList = (ArrayList)adapter.GetByEmail(userEmail);
+            foreach(Blab blab in blabList)
+            {
+                if(blab == newBlab)
+                {
+                    Assert.AreEqual(blab.Id, newBlab.Id);
+                }
+            }
+        }
     }
 }

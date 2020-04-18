@@ -74,12 +74,6 @@ namespace BlabberApp.DataStore
             return userBlabs;
         }
 
-        public void Update(IDatum obj)
-        {
-            this.Delete(obj);
-            this.Create(obj);
-        }
-
         public void Delete(IDatum obj)
         {
             lstBuffer.Remove(obj);

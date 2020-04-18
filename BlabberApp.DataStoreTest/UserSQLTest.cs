@@ -9,8 +9,11 @@ namespace BlabberApp.DataStoreTest
     public class UserSQLTest
     {
         private User user;
+        private User user2;
         private UserAdapter adapterHarness;
         private readonly string userEmail = "foobar@example.com";
+        private readonly string user2Email = "foobar2@example.com";
+        private bool secondUserAdded = false;
 
         [TestInitialize]
         public void Setup()
@@ -23,6 +26,7 @@ namespace BlabberApp.DataStoreTest
         public void Cleanup()
         {
             adapterHarness.Delete(user);
+            
         }
         
         [TestMethod]
@@ -53,5 +57,15 @@ namespace BlabberApp.DataStoreTest
             User actual = adapterHarness.GetUserByEmail(user.Email);
             Assert.AreEqual(user.Id, actual.Id);
         }
+
+        [TestMethod]
+        public void TestDelete()
+        {
+            adapterHarness.Add(user);
+            adapterHarness.Delete(user);
+            CollectionAssert.DoesNotContain((ArrayList)adapterHarness.GetAll(), user);
+        }
+
+        
     }
 }

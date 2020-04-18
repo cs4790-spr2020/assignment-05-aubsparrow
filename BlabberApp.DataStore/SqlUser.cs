@@ -23,12 +23,6 @@ namespace BlabberApp.DataStore
                 throw new Exception(ex.ToString());
             }
         }
-
-        public void Close()
-        {
-            connection.Close();
-        }
-
         public void Create(IDatum obj)
         {
             User user = (User)obj;
