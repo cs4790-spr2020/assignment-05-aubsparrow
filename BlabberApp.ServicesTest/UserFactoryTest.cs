@@ -36,6 +36,7 @@ namespace BlabberApp.ServicesTest
             Assert.IsTrue(InMemoryService is InMemory);
         }
 
+        [TestMethod]
         public void TestCreateUserService()
         {
             UserService UserService = factory.CreateUserService();
