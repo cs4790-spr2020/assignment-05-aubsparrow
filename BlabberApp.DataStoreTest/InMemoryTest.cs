@@ -85,5 +85,12 @@ namespace BlabberApp.DataStoreTest
             CollectionAssert.Contains(listBlabs, newBlab);
         }
 
+        [TestMethod]
+        public void TestNewBlab()
+        {
+            Blab newBlab = new Blab(message + " 2");
+            blabAdapterHarness.Add(newBlab);
+            Assert.AreEqual(newBlab.Id, blabAdapterHarness.GetById(newBlab).Id);
+        }
     }
 }

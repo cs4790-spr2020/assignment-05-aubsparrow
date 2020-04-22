@@ -8,10 +8,11 @@ namespace BlabberApp.DataStoreTest
     [TestClass]
     public class BlabSQLTest
     {
-        private string userEmail = "foobar@example.com";
+        private string userEmail = "test@example.com";
         private User newUser;
         private Blab newBlab;
         private BlabAdapter adapter;
+        private UserAdapter userAdapter;
         private string blabMessage = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...";
     
         [TestInitialize]
@@ -20,6 +21,8 @@ namespace BlabberApp.DataStoreTest
             newUser = new User(userEmail);
             newBlab = new Blab(blabMessage, newUser);
             adapter = new BlabAdapter(new SqlBlab(), new SqlUser());
+            userAdapter = new UserAdapter(new SqlUser());
+            
         }
 
         [TestCleanup]
@@ -41,10 +44,10 @@ namespace BlabberApp.DataStoreTest
         {
             adapter.Add(newBlab);
             var BlabList = (ArrayList)adapter.GetAll();
-            foreach(Blab blab in BlabList){
-                if(blab == newBlab)
-                {
-                    Assert.AreEqual(blab.Id, newBlab.Id);
+            foreach(@Blab blab in BlabList)
+            {
+                if(blab.Id == newBlab.Id){
+                    Assert.AreEqual(newBlab.Id, blab.Id);
                 }
             }
         }
@@ -61,6 +64,17 @@ namespace BlabberApp.DataStoreTest
                     Assert.AreEqual(blab.Id, newBlab.Id);
                 }
             }
+        }
+
+        [TestMethod]
+        public void TestNewBlabs()
+        {
+            Blab newBlab = new Blab();
+            newBlab.Message = "test message";
+            User user = new User(userEmail);
+            newBlab.user = user;
+            adapter.Add(newBlab);
+            Assert.AreEqual(newBlab.Id, adapter.GetById(newBlab).Id);
         }
     }
 }

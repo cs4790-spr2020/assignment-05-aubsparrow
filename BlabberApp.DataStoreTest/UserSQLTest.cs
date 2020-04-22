@@ -66,6 +66,14 @@ namespace BlabberApp.DataStoreTest
             CollectionAssert.DoesNotContain((ArrayList)adapterHarness.GetAll(), user);
         }
 
+        public void TestChangeUserEmail()
+        {
+            User user = new User();
+            user.ChangeEmail("foobar5@example.com");
+            adapterHarness.Add(user);
+            Assert.AreEqual(user.Email, adapterHarness.GetById(user.Id).Email);
+        }
+
         
     }
 }
