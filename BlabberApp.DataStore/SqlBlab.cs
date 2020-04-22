@@ -122,7 +122,11 @@ namespace BlabberApp.DataStore
 
         private Blab convertRowToBlab(DataRow row)
         {
-            Blab blab = new Blab();
+            User user = new User();
+            
+            user.ChangeEmail(row["UserID"].ToString());
+
+            Blab blab = new Blab(row["Message"].ToString(), user);
             blab.Id = new Guid(row["SysID"].ToString());
             blab.Message = row["Message"].ToString();
             blab.DateTime = (DateTime)row["CreatedDTTM"];

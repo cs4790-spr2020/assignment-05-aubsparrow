@@ -49,5 +49,14 @@ namespace BlabberApp.ServicesTest
 
         }
         
+        [TestMethod]
+        public void TestGetEmail()
+        {
+            User newUser = new User(email);
+            Blab newBlab = new Blab(message, newUser);
+            service.NewBlab(newBlab);
+            ArrayList listBlabs = (ArrayList)service.GetAll();
+            Assert.AreEqual(newUser.Email, newBlab.user.Email);
+        }
     }
 }

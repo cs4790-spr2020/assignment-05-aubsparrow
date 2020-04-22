@@ -30,19 +30,13 @@ namespace BlabberApp.Services
 
         public Blab CreateBlab(string msg, string email)
         {
-            User user = userAdapter.GetUserByEmail(email);
-            //error scenario - user doesn't exist
-            if(user == null)
-            {
-                User newUser = new User(email);
-                userAdapter.Add(newUser);
-                return new Blab(msg, newUser);
-            }
-            else
-            {
-                return new Blab(msg, user);
-            }
+            return new Blab(msg, new User(email));
             
+        }
+
+        public Blab CreateBlab(string msg, User user)
+        {
+            return new Blab(msg, user);
         }
     }
 }

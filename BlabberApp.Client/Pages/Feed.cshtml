@@ -21,7 +21,7 @@
     <div id="content">
         <p>
                 @foreach(@Blab blab in @BlabService.GetAll()){
-                    <li>@blab.user.Email: @blab.Message</li>
+                    <li><b>@blab.user.Email</b>: @blab.Message.ToString()</li>
                 }
             </p>
     </div>
