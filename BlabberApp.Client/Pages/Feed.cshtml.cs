@@ -14,9 +14,11 @@ namespace BlabberApp.Client.Pages
             
         }
 
-        public FeedModel(IBlabService service)
+        public FeedModel(IBlabService bService, IUserService uService)
         {
-            blabService = service;
+            blabService = bService;
+            userService = uService;
+
         }
 
         public void OnPost()
@@ -25,8 +27,8 @@ namespace BlabberApp.Client.Pages
             var message = Request.Form["blabMessage"];
             try
             {
-                User user = userService.FindUser(email);
-                Blab blab = blabService.CreateBlab(message, user);
+                User user = userService.FindUser(email.ToString());
+                Blab blab = blabService.CreateBlab(message.ToString(), user);
                 blabService.NewBlab(blab);
             }
             catch (Exception ex)
