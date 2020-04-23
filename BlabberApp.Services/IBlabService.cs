@@ -9,6 +9,5 @@ namespace BlabberApp.Services
        void NewBlab(Blab blab);
        IEnumerable GetAll(); 
        Blab CreateBlab(string message, string email);
-       Blab CreateBlab(string message, User user);
     }
 }

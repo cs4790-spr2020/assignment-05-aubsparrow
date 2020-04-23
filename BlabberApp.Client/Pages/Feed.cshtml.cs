@@ -27,8 +27,7 @@ namespace BlabberApp.Client.Pages
             var message = Request.Form["blabMessage"];
             try
             {
-                User user = userService.FindUser(email.ToString());
-                Blab blab = blabService.CreateBlab(message.ToString(), user);
+                Blab blab = blabService.CreateBlab(message, email.ToString());
                 blabService.NewBlab(blab);
             }
             catch (Exception ex)

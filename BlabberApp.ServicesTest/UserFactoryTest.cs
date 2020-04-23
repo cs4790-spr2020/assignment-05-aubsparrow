@@ -1,4 +1,5 @@
 using BlabberApp.Services;
+using BlabberApp.Domain;
 using BlabberApp.DataStore;
 using System.Collections;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -9,10 +10,13 @@ namespace BlabberApp.ServicesTest
     public class UserFactoryTest
     {
         private UserFactory factory;
+        private User newUser;
+        private string email = "foobar@example.com";
         [TestInitialize]
         public void Setup()
         {
             factory = new UserFactory();
+            newUser = new User(email);
         }
         
         [TestMethod]
@@ -43,5 +47,37 @@ namespace BlabberApp.ServicesTest
             Assert.IsTrue(UserService is UserService);
         }
 
+        [TestMethod]
+        public void TestUsingAdapter()
+        {
+            UserAdapter adapter = factory.CreateUserAdapter();
+            User newUser = new User();
+            newUser.ChangeEmail("foobar@example.com");
+            adapter.Add(newUser);
+            Assert.AreEqual(newUser.Id, adapter.GetUserByEmail("foobar@example.com").Id);
+            
+        }
+        
+        [TestMethod]
+        public void TestUsingAdapater01()
+        {
+            UserAdapter adapter = factory.CreateUserAdapter();
+            User newUser = new User("foobar@example.com");
+            adapter.Add(newUser);
+            Assert.AreEqual(newUser.Id, adapter.GetById(newUser.Id).Id);
+        }
+
+        [TestMethod]
+        public void TestDeleteUser()
+        {
+            UserAdapter adapter = factory.CreateUserAdapter(new SqlUser());
+            adapter.Add(newUser);
+            adapter.Delete(newUser);
+            CollectionAssert.DoesNotContain((ArrayList)adapter.GetAll(), newUser);
+        }
+
+       
+
+        
     }
 }

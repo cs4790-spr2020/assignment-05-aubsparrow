@@ -30,13 +30,14 @@ namespace BlabberApp.Services
 
         public Blab CreateBlab(string msg, string email)
         {
-            return new Blab(msg, new User(email));
-            
-        }
-
-        public Blab CreateBlab(string msg, User user)
-        {
+            User user = userAdapter.GetUserByEmail(email);
+            if(user == null)
+            {
+                user = new User(email);
+                return new Blab(msg, user);
+            }
             return new Blab(msg, user);
+            
         }
     }
 }

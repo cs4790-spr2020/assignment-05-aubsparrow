@@ -8,6 +8,5 @@ namespace BlabberApp.Services
         IEnumerable GetAllUsers();
         void AddNewUser(string email);
         User CreateUser(string email);
-        User FindUser(string email);
     }
 }

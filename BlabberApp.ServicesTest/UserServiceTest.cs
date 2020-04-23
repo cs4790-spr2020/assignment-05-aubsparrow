@@ -52,6 +52,8 @@ namespace BlabberApp.ServicesTest
                     Assert.AreEqual(email, user.Email);
                 }
             }
-        }  
+        } 
+ 
+
     }
 }
