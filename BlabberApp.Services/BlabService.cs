@@ -34,6 +34,7 @@ namespace BlabberApp.Services
             if(user == null)
             {
                 user = new User(email);
+                userAdapter.Add(user);
                 return new Blab(msg, user);
             }
             return new Blab(msg, user);
