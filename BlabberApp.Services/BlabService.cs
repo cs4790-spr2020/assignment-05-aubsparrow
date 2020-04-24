@@ -15,7 +15,6 @@ namespace BlabberApp.Services
             this.userAdapter = userAdapter;
         }
         
-      
         public void NewBlab(Blab blab)
         {
             BlabAdapter.Add(blab);

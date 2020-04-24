@@ -173,13 +173,13 @@ DA:71,1
 DA:72,1
 DA:74,1
 DA:76,1
-DA:78,11
-DA:79,4
-DA:80,4
-DA:81,4
+DA:78,45
+DA:79,21
+DA:80,21
+DA:81,21
 DA:82,1
 DA:83,1
-BRDA:78,114,1,4
+BRDA:78,114,1,21
 BRDA:78,114,0,1
 FN:85,System.Collections.IEnumerable BlabberApp.DataStore.SqlBlab::GetBlabsByEmail(System.String)
 FNDA:1,System.Collections.IEnumerable BlabberApp.DataStore.SqlBlab::GetBlabsByEmail(System.String)
@@ -190,13 +190,13 @@ DA:89,1
 DA:90,1
 DA:92,1
 DA:94,1
-DA:96,11
-DA:97,4
-DA:98,4
-DA:99,4
+DA:96,5
+DA:97,1
+DA:98,1
+DA:99,1
 DA:100,1
 DA:101,1
-BRDA:96,130,1,4
+BRDA:96,130,1,1
 BRDA:96,130,0,1
 FN:103,System.Void BlabberApp.DataStore.SqlBlab::Update(BlabberApp.Domain.IDatum)
 FNDA:0,System.Void BlabberApp.DataStore.SqlBlab::Update(BlabberApp.Domain.IDatum)
@@ -217,16 +217,16 @@ DA:118,0
 DA:119,0
 DA:121,4
 FN:123,BlabberApp.Domain.Blab BlabberApp.DataStore.SqlBlab::convertRowToBlab(System.Data.DataRow)
-FNDA:10,BlabberApp.Domain.Blab BlabberApp.DataStore.SqlBlab::convertRowToBlab(System.Data.DataRow)
-DA:124,10
-DA:125,10
-DA:127,10
-DA:129,10
-DA:130,10
-DA:131,10
-DA:132,10
-DA:134,10
-DA:135,10
+FNDA:24,BlabberApp.Domain.Blab BlabberApp.DataStore.SqlBlab::convertRowToBlab(System.Data.DataRow)
+DA:124,24
+DA:125,24
+DA:127,24
+DA:129,24
+DA:130,24
+DA:131,24
+DA:132,24
+DA:134,24
+DA:135,24
 FN:12,System.Void BlabberApp.DataStore.SqlBlab::.ctor()
 FNDA:4,System.Void BlabberApp.DataStore.SqlBlab::.ctor()
 DA:13,4
@@ -276,16 +276,16 @@ DA:52,2
 DA:53,2
 DA:55,2
 DA:57,2
-DA:59,28
-DA:60,11
-DA:61,11
-DA:62,11
+DA:59,16
+DA:60,5
+DA:61,5
+DA:62,5
 DA:64,2
 DA:66,0
 DA:67,0
 DA:68,0
 DA:70,2
-BRDA:59,115,1,11
+BRDA:59,115,1,5
 BRDA:59,115,0,2
 FN:72,BlabberApp.Domain.IDatum BlabberApp.DataStore.SqlUser::GetById(System.Guid)
 FNDA:1,BlabberApp.Domain.IDatum BlabberApp.DataStore.SqlUser::GetById(System.Guid)
@@ -334,15 +334,15 @@ DA:125,0
 DA:126,0
 DA:129,1
 FN:131,BlabberApp.Domain.User BlabberApp.DataStore.SqlUser::convertRowToUesr(System.Data.DataRow)
-FNDA:13,BlabberApp.Domain.User BlabberApp.DataStore.SqlUser::convertRowToUesr(System.Data.DataRow)
-DA:132,13
-DA:133,13
-DA:134,13
-DA:135,13
-DA:136,13
-DA:137,13
-DA:139,13
-DA:140,13
+FNDA:7,BlabberApp.Domain.User BlabberApp.DataStore.SqlUser::convertRowToUesr(System.Data.DataRow)
+DA:132,7
+DA:133,7
+DA:134,7
+DA:135,7
+DA:136,7
+DA:137,7
+DA:139,7
+DA:140,7
 FN:11,System.Void BlabberApp.DataStore.SqlUser::.ctor()
 FNDA:12,System.Void BlabberApp.DataStore.SqlUser::.ctor()
 DA:12,12
@@ -404,17 +404,17 @@ FNH:6
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.Domain\Blab.cs
 FN:6,System.Guid BlabberApp.Domain.Blab::get_Id()
-FNDA:61,System.Guid BlabberApp.Domain.Blab::get_Id()
-DA:7,61
+FNDA:123,System.Guid BlabberApp.Domain.Blab::get_Id()
+DA:7,123
 FN:7,System.DateTime BlabberApp.Domain.Blab::get_DateTime()
 FNDA:0,System.DateTime BlabberApp.Domain.Blab::get_DateTime()
 DA:8,0
 FN:8,System.String BlabberApp.Domain.Blab::get_Message()
-FNDA:38,System.String BlabberApp.Domain.Blab::get_Message()
-DA:9,38
+FNDA:66,System.String BlabberApp.Domain.Blab::get_Message()
+DA:9,66
 FN:9,BlabberApp.Domain.User BlabberApp.Domain.Blab::get_user()
-FNDA:29,BlabberApp.Domain.User BlabberApp.Domain.Blab::get_user()
-DA:10,29
+FNDA:43,BlabberApp.Domain.User BlabberApp.Domain.Blab::get_user()
+DA:10,43
 FN:12,System.Void BlabberApp.Domain.Blab::.ctor()
 FNDA:1,System.Void BlabberApp.Domain.Blab::.ctor()
 DA:13,1
@@ -434,14 +434,14 @@ DA:25,1
 DA:26,1
 DA:27,1
 FN:29,System.Void BlabberApp.Domain.Blab::.ctor(System.String,BlabberApp.Domain.User)
-FNDA:21,System.Void BlabberApp.Domain.Blab::.ctor(System.String,BlabberApp.Domain.User)
-DA:30,21
-DA:31,21
-DA:32,21
-DA:33,21
-DA:34,21
-DA:35,21
-DA:36,21
+FNDA:35,System.Void BlabberApp.Domain.Blab::.ctor(System.String,BlabberApp.Domain.User)
+DA:30,35
+DA:31,35
+DA:32,35
+DA:33,35
+DA:34,35
+DA:35,35
+DA:36,35
 LF:25
 LH:24
 BRF:0
@@ -451,8 +451,8 @@ FNH:6
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.Domain\User.cs
 FN:8,System.Guid BlabberApp.Domain.User::get_Id()
-FNDA:79,System.Guid BlabberApp.Domain.User::get_Id()
-DA:9,79
+FNDA:81,System.Guid BlabberApp.Domain.User::get_Id()
+DA:9,81
 FN:9,System.DateTime BlabberApp.Domain.User::get_RegisterDTTM()
 FNDA:0,System.DateTime BlabberApp.Domain.User::get_RegisterDTTM()
 DA:10,0
@@ -460,31 +460,31 @@ FN:10,System.DateTime BlabberApp.Domain.User::get_LastLoginDTTM()
 FNDA:0,System.DateTime BlabberApp.Domain.User::get_LastLoginDTTM()
 DA:11,0
 FN:11,System.String BlabberApp.Domain.User::get_Email()
-FNDA:51,System.String BlabberApp.Domain.User::get_Email()
-DA:12,51
+FNDA:59,System.String BlabberApp.Domain.User::get_Email()
+DA:12,59
 FN:28,System.Void BlabberApp.Domain.User::ChangeEmail(System.String)
-FNDA:39,System.Void BlabberApp.Domain.User::ChangeEmail(System.String)
-DA:29,39
-DA:30,39
+FNDA:47,System.Void BlabberApp.Domain.User::ChangeEmail(System.String)
+DA:29,47
+DA:30,47
 DA:31,0
-DA:33,39
-DA:34,39
-DA:35,39
+DA:33,47
+DA:34,47
+DA:35,47
 DA:36,0
 DA:37,0
 DA:38,0
-DA:40,39
-DA:41,39
-BRDA:30,7,0,39
+DA:40,47
+DA:41,47
+BRDA:30,7,0,47
 BRDA:30,7,1,0
 BRDA:30,24,0,0
-BRDA:30,24,1,39
+BRDA:30,24,1,47
 FN:13,System.Void BlabberApp.Domain.User::.ctor()
-FNDA:25,System.Void BlabberApp.Domain.User::.ctor()
-DA:14,25
-DA:15,25
-DA:16,25
-DA:17,25
+FNDA:33,System.Void BlabberApp.Domain.User::.ctor()
+DA:14,33
+DA:15,33
+DA:16,33
+DA:17,33
 FN:17,System.Void BlabberApp.Domain.User::.ctor(System.String)
 FNDA:16,System.Void BlabberApp.Domain.User::.ctor(System.String)
 DA:18,16
