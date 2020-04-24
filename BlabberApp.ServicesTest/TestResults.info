@@ -1,49 +1,49 @@
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.DataStore\BlabAdapter.cs
 FN:18,System.Void BlabberApp.DataStore.BlabAdapter::Add(BlabberApp.Domain.Blab)
-FNDA:3,System.Void BlabberApp.DataStore.BlabAdapter::Add(BlabberApp.Domain.Blab)
-DA:19,3
-DA:20,3
-DA:21,3
+FNDA:4,System.Void BlabberApp.DataStore.BlabAdapter::Add(BlabberApp.Domain.Blab)
+DA:19,4
+DA:20,4
+DA:21,4
 FN:23,System.Collections.IEnumerable BlabberApp.DataStore.BlabAdapter::GetAll()
-FNDA:3,System.Collections.IEnumerable BlabberApp.DataStore.BlabAdapter::GetAll()
-DA:24,3
-DA:25,3
-DA:26,3
+FNDA:4,System.Collections.IEnumerable BlabberApp.DataStore.BlabAdapter::GetAll()
+DA:24,4
+DA:25,4
+DA:26,4
 FN:28,BlabberApp.Domain.Blab BlabberApp.DataStore.BlabAdapter::GetById(BlabberApp.Domain.Blab)
-FNDA:0,BlabberApp.Domain.Blab BlabberApp.DataStore.BlabAdapter::GetById(BlabberApp.Domain.Blab)
-DA:29,0
-DA:30,0
-DA:31,0
+FNDA:1,BlabberApp.Domain.Blab BlabberApp.DataStore.BlabAdapter::GetById(BlabberApp.Domain.Blab)
+DA:29,1
+DA:30,1
+DA:31,1
 FN:32,System.Void BlabberApp.DataStore.BlabAdapter::Delete(BlabberApp.Domain.Blab)
-FNDA:0,System.Void BlabberApp.DataStore.BlabAdapter::Delete(BlabberApp.Domain.Blab)
-DA:33,0
-DA:34,0
-DA:35,0
+FNDA:1,System.Void BlabberApp.DataStore.BlabAdapter::Delete(BlabberApp.Domain.Blab)
+DA:33,1
+DA:34,1
+DA:35,1
 FN:37,System.Collections.IEnumerable BlabberApp.DataStore.BlabAdapter::GetByEmail(System.String)
 FNDA:0,System.Collections.IEnumerable BlabberApp.DataStore.BlabAdapter::GetByEmail(System.String)
 DA:38,0
 DA:39,0
 DA:40,0
 FN:11,System.Void BlabberApp.DataStore.BlabAdapter::.ctor(BlabberApp.DataStore.IBlabPlugin,BlabberApp.DataStore.IUserPlugin)
-FNDA:7,System.Void BlabberApp.DataStore.BlabAdapter::.ctor(BlabberApp.DataStore.IBlabPlugin,BlabberApp.DataStore.IUserPlugin)
-DA:12,7
-DA:13,7
-DA:14,7
-DA:15,7
-DA:16,7
+FNDA:9,System.Void BlabberApp.DataStore.BlabAdapter::.ctor(BlabberApp.DataStore.IBlabPlugin,BlabberApp.DataStore.IUserPlugin)
+DA:12,9
+DA:13,9
+DA:14,9
+DA:15,9
+DA:16,9
 LF:20
-LH:11
+LH:17
 BRF:0
 BRH:0
 FNF:6
-FNH:3
+FNH:5
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.DataStore\InMemory.cs
 FN:18,System.Void BlabberApp.DataStore.InMemory::Create(BlabberApp.Domain.IDatum)
-FNDA:8,System.Void BlabberApp.DataStore.InMemory::Create(BlabberApp.Domain.IDatum)
-DA:19,8
-DA:20,8
-DA:21,8
+FNDA:9,System.Void BlabberApp.DataStore.InMemory::Create(BlabberApp.Domain.IDatum)
+DA:19,9
+DA:20,9
+DA:21,9
 FN:23,System.Collections.IEnumerable BlabberApp.DataStore.InMemory::ReadAll()
 FNDA:6,System.Collections.IEnumerable BlabberApp.DataStore.InMemory::ReadAll()
 DA:24,6
@@ -117,11 +117,11 @@ DA:78,0
 DA:79,0
 DA:80,0
 FN:12,System.Void BlabberApp.DataStore.InMemory::.ctor()
-FNDA:29,System.Void BlabberApp.DataStore.InMemory::.ctor()
-DA:13,29
-DA:14,29
-DA:15,29
-DA:16,29
+FNDA:32,System.Void BlabberApp.DataStore.InMemory::.ctor()
+DA:13,32
+DA:14,32
+DA:15,32
+DA:16,32
 LF:51
 LH:25
 BRF:16
@@ -131,56 +131,56 @@ FNH:5
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.DataStore\SqlBlab.cs
 FN:27,System.Void BlabberApp.DataStore.SqlBlab::Create(BlabberApp.Domain.IDatum)
-FNDA:1,System.Void BlabberApp.DataStore.SqlBlab::Create(BlabberApp.Domain.IDatum)
-DA:28,1
-DA:29,1
-DA:31,1
-DA:32,1
-DA:33,1
-DA:34,1
-DA:35,1
-DA:36,1
-DA:37,1
-DA:38,1
-DA:39,1
-DA:40,1
+FNDA:2,System.Void BlabberApp.DataStore.SqlBlab::Create(BlabberApp.Domain.IDatum)
+DA:28,2
+DA:29,2
+DA:31,2
+DA:32,2
+DA:33,2
+DA:34,2
+DA:35,2
+DA:36,2
+DA:37,2
+DA:38,2
+DA:39,2
+DA:40,2
 DA:41,0
 DA:42,0
 DA:43,0
 DA:44,0
-DA:46,1
+DA:46,2
 FN:48,BlabberApp.Domain.IDatum BlabberApp.DataStore.SqlBlab::GetById(System.Guid)
-FNDA:1,BlabberApp.Domain.IDatum BlabberApp.DataStore.SqlBlab::GetById(System.Guid)
-DA:49,1
-DA:51,1
-DA:52,1
-DA:53,1
-DA:54,1
-DA:55,1
-DA:57,1
-DA:58,1
+FNDA:2,BlabberApp.Domain.IDatum BlabberApp.DataStore.SqlBlab::GetById(System.Guid)
+DA:49,2
+DA:51,2
+DA:52,2
+DA:53,2
+DA:54,2
+DA:55,2
+DA:57,2
+DA:58,2
 DA:60,0
 DA:61,0
 DA:62,0
 DA:63,0
-DA:65,1
+DA:65,2
 FN:67,System.Collections.IEnumerable BlabberApp.DataStore.SqlBlab::ReadAll()
-FNDA:0,System.Collections.IEnumerable BlabberApp.DataStore.SqlBlab::ReadAll()
-DA:68,0
-DA:69,0
-DA:70,0
-DA:71,0
-DA:72,0
-DA:74,0
-DA:76,0
-DA:78,0
-DA:79,0
-DA:80,0
-DA:81,0
-DA:82,0
-DA:83,0
-BRDA:78,114,1,0
-BRDA:78,114,0,0
+FNDA:1,System.Collections.IEnumerable BlabberApp.DataStore.SqlBlab::ReadAll()
+DA:68,1
+DA:69,1
+DA:70,1
+DA:71,1
+DA:72,1
+DA:74,1
+DA:76,1
+DA:78,41
+DA:79,19
+DA:80,19
+DA:81,19
+DA:82,1
+DA:83,1
+BRDA:78,114,1,19
+BRDA:78,114,0,1
 FN:85,System.Collections.IEnumerable BlabberApp.DataStore.SqlBlab::GetBlabsByEmail(System.String)
 FNDA:0,System.Collections.IEnumerable BlabberApp.DataStore.SqlBlab::GetBlabsByEmail(System.String)
 DA:86,0
@@ -204,89 +204,89 @@ DA:104,0
 DA:105,0
 DA:106,0
 FN:108,System.Void BlabberApp.DataStore.SqlBlab::Delete(BlabberApp.Domain.IDatum)
-FNDA:0,System.Void BlabberApp.DataStore.SqlBlab::Delete(BlabberApp.Domain.IDatum)
-DA:109,0
-DA:111,0
-DA:112,0
-DA:113,0
-DA:114,0
-DA:115,0
+FNDA:1,System.Void BlabberApp.DataStore.SqlBlab::Delete(BlabberApp.Domain.IDatum)
+DA:109,1
+DA:111,1
+DA:112,1
+DA:113,1
+DA:114,1
+DA:115,1
 DA:116,0
 DA:117,0
 DA:118,0
 DA:119,0
-DA:121,0
+DA:121,1
 FN:123,BlabberApp.Domain.Blab BlabberApp.DataStore.SqlBlab::convertRowToBlab(System.Data.DataRow)
-FNDA:1,BlabberApp.Domain.Blab BlabberApp.DataStore.SqlBlab::convertRowToBlab(System.Data.DataRow)
-DA:124,1
-DA:125,1
-DA:127,1
-DA:129,1
-DA:130,1
-DA:131,1
-DA:132,1
-DA:134,1
-DA:135,1
+FNDA:21,BlabberApp.Domain.Blab BlabberApp.DataStore.SqlBlab::convertRowToBlab(System.Data.DataRow)
+DA:124,21
+DA:125,21
+DA:127,21
+DA:129,21
+DA:130,21
+DA:131,21
+DA:132,21
+DA:134,21
+DA:135,21
 FN:12,System.Void BlabberApp.DataStore.SqlBlab::.ctor()
-FNDA:2,System.Void BlabberApp.DataStore.SqlBlab::.ctor()
-DA:13,2
-DA:14,2
-DA:15,2
-DA:17,2
-DA:18,2
-DA:19,2
+FNDA:3,System.Void BlabberApp.DataStore.SqlBlab::.ctor()
+DA:13,3
+DA:14,3
+DA:15,3
+DA:17,3
+DA:18,3
+DA:19,3
 DA:20,0
 DA:21,0
 DA:22,0
 DA:23,0
-DA:25,2
+DA:25,3
 LF:90
-LH:38
+LH:58
 BRF:4
-BRH:0
+BRH:2
 FNF:8
-FNH:4
+FNH:6
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.DataStore\SqlUser.cs
 FN:26,System.Void BlabberApp.DataStore.SqlUser::Create(BlabberApp.Domain.IDatum)
-FNDA:1,System.Void BlabberApp.DataStore.SqlUser::Create(BlabberApp.Domain.IDatum)
-DA:27,1
-DA:28,1
-DA:30,1
-DA:31,1
-DA:32,1
-DA:33,1
-DA:34,1
-DA:35,1
-DA:36,1
-DA:37,1
-DA:38,1
-DA:39,1
+FNDA:2,System.Void BlabberApp.DataStore.SqlUser::Create(BlabberApp.Domain.IDatum)
+DA:27,2
+DA:28,2
+DA:30,2
+DA:31,2
+DA:32,2
+DA:33,2
+DA:34,2
+DA:35,2
+DA:36,2
+DA:37,2
+DA:38,2
+DA:39,2
 DA:40,0
 DA:41,0
 DA:42,0
-DA:44,1
+DA:44,2
 FN:46,System.Collections.IEnumerable BlabberApp.DataStore.SqlUser::ReadAll()
-FNDA:1,System.Collections.IEnumerable BlabberApp.DataStore.SqlUser::ReadAll()
-DA:47,1
-DA:49,1
-DA:50,1
-DA:51,1
-DA:52,1
-DA:53,1
-DA:55,1
-DA:57,1
-DA:59,11
+FNDA:2,System.Collections.IEnumerable BlabberApp.DataStore.SqlUser::ReadAll()
+DA:47,2
+DA:49,2
+DA:50,2
+DA:51,2
+DA:52,2
+DA:53,2
+DA:55,2
+DA:57,2
+DA:59,14
 DA:60,4
 DA:61,4
 DA:62,4
-DA:64,1
+DA:64,2
 DA:66,0
 DA:67,0
 DA:68,0
-DA:70,1
+DA:70,2
 BRDA:59,115,1,4
-BRDA:59,115,0,1
+BRDA:59,115,0,2
 FN:72,BlabberApp.Domain.IDatum BlabberApp.DataStore.SqlUser::GetById(System.Guid)
 FNDA:0,BlabberApp.Domain.IDatum BlabberApp.DataStore.SqlUser::GetById(System.Guid)
 DA:73,0
@@ -303,98 +303,98 @@ DA:87,0
 DA:88,0
 DA:90,0
 FN:92,System.Void BlabberApp.DataStore.SqlUser::Delete(BlabberApp.Domain.IDatum)
-FNDA:1,System.Void BlabberApp.DataStore.SqlUser::Delete(BlabberApp.Domain.IDatum)
-DA:93,1
-DA:95,1
-DA:96,1
-DA:97,1
-DA:98,1
-DA:99,1
-DA:100,1
-DA:101,1
+FNDA:2,System.Void BlabberApp.DataStore.SqlUser::Delete(BlabberApp.Domain.IDatum)
+DA:93,2
+DA:95,2
+DA:96,2
+DA:97,2
+DA:98,2
+DA:99,2
+DA:100,2
+DA:101,2
 DA:102,0
 DA:103,0
 DA:104,0
 DA:105,0
-DA:107,1
+DA:107,2
 FN:109,BlabberApp.Domain.User BlabberApp.DataStore.SqlUser::GetUserByEmail(System.String)
-FNDA:0,BlabberApp.Domain.User BlabberApp.DataStore.SqlUser::GetUserByEmail(System.String)
-DA:110,0
-DA:112,0
-DA:113,0
-DA:114,0
-DA:115,0
-DA:116,0
-DA:118,0
-DA:119,0
-DA:121,0
-DA:123,0
-DA:124,0
-DA:125,0
-DA:126,0
-DA:129,0
+FNDA:3,BlabberApp.Domain.User BlabberApp.DataStore.SqlUser::GetUserByEmail(System.String)
+DA:110,3
+DA:112,3
+DA:113,3
+DA:114,3
+DA:115,3
+DA:116,3
+DA:118,3
+DA:119,3
+DA:121,1
+DA:123,2
+DA:124,2
+DA:125,2
+DA:126,2
+DA:129,3
 FN:131,BlabberApp.Domain.User BlabberApp.DataStore.SqlUser::convertRowToUesr(System.Data.DataRow)
-FNDA:4,BlabberApp.Domain.User BlabberApp.DataStore.SqlUser::convertRowToUesr(System.Data.DataRow)
-DA:132,4
-DA:133,4
-DA:134,4
-DA:135,4
-DA:136,4
-DA:137,4
-DA:139,4
-DA:140,4
+FNDA:5,BlabberApp.Domain.User BlabberApp.DataStore.SqlUser::convertRowToUesr(System.Data.DataRow)
+DA:132,5
+DA:133,5
+DA:134,5
+DA:135,5
+DA:136,5
+DA:137,5
+DA:139,5
+DA:140,5
 FN:11,System.Void BlabberApp.DataStore.SqlUser::.ctor()
-FNDA:2,System.Void BlabberApp.DataStore.SqlUser::.ctor()
-DA:12,2
-DA:13,2
-DA:15,2
-DA:17,2
-DA:18,2
-DA:19,2
+FNDA:3,System.Void BlabberApp.DataStore.SqlUser::.ctor()
+DA:12,3
+DA:13,3
+DA:15,3
+DA:17,3
+DA:18,3
+DA:19,3
 DA:20,0
 DA:21,0
 DA:22,0
 DA:23,0
-DA:25,2
+DA:25,3
 LF:92
-LH:51
+LH:65
 BRF:2
 BRH:2
 FNF:7
-FNH:5
+FNH:6
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.DataStore\UserAdapter.cs
 FN:16,System.Void BlabberApp.DataStore.UserAdapter::Add(BlabberApp.Domain.User)
-FNDA:5,System.Void BlabberApp.DataStore.UserAdapter::Add(BlabberApp.Domain.User)
-DA:17,5
-DA:18,5
-DA:19,5
+FNDA:7,System.Void BlabberApp.DataStore.UserAdapter::Add(BlabberApp.Domain.User)
+DA:17,7
+DA:18,7
+DA:19,7
 FN:21,System.Collections.IEnumerable BlabberApp.DataStore.UserAdapter::GetAll()
-FNDA:4,System.Collections.IEnumerable BlabberApp.DataStore.UserAdapter::GetAll()
-DA:22,4
-DA:23,4
-DA:24,4
+FNDA:5,System.Collections.IEnumerable BlabberApp.DataStore.UserAdapter::GetAll()
+DA:22,5
+DA:23,5
+DA:24,5
 FN:26,BlabberApp.Domain.User BlabberApp.DataStore.UserAdapter::GetById(System.Guid)
 FNDA:1,BlabberApp.Domain.User BlabberApp.DataStore.UserAdapter::GetById(System.Guid)
 DA:27,1
 DA:28,1
 DA:29,1
 FN:31,System.Void BlabberApp.DataStore.UserAdapter::Delete(BlabberApp.Domain.User)
-FNDA:1,System.Void BlabberApp.DataStore.UserAdapter::Delete(BlabberApp.Domain.User)
-DA:32,1
-DA:33,1
-DA:34,1
+FNDA:2,System.Void BlabberApp.DataStore.UserAdapter::Delete(BlabberApp.Domain.User)
+DA:32,2
+DA:33,2
+DA:34,2
 FN:36,BlabberApp.Domain.User BlabberApp.DataStore.UserAdapter::GetUserByEmail(System.String)
-FNDA:3,BlabberApp.Domain.User BlabberApp.DataStore.UserAdapter::GetUserByEmail(System.String)
-DA:37,3
-DA:38,3
-DA:39,3
+FNDA:6,BlabberApp.Domain.User BlabberApp.DataStore.UserAdapter::GetUserByEmail(System.String)
+DA:37,6
+DA:38,6
+DA:39,6
 FN:10,System.Void BlabberApp.DataStore.UserAdapter::.ctor(BlabberApp.DataStore.IUserPlugin)
-FNDA:13,System.Void BlabberApp.DataStore.UserAdapter::.ctor(BlabberApp.DataStore.IUserPlugin)
-DA:11,13
-DA:12,13
-DA:13,13
-DA:14,13
+FNDA:15,System.Void BlabberApp.DataStore.UserAdapter::.ctor(BlabberApp.DataStore.IUserPlugin)
+DA:11,15
+DA:12,15
+DA:13,15
+DA:14,15
 LF:19
 LH:19
 BRF:0
@@ -404,17 +404,17 @@ FNH:6
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.Domain\Blab.cs
 FN:6,System.Guid BlabberApp.Domain.Blab::get_Id()
-FNDA:17,System.Guid BlabberApp.Domain.Blab::get_Id()
-DA:7,17
+FNDA:63,System.Guid BlabberApp.Domain.Blab::get_Id()
+DA:7,63
 FN:7,System.DateTime BlabberApp.Domain.Blab::get_DateTime()
 FNDA:0,System.DateTime BlabberApp.Domain.Blab::get_DateTime()
 DA:8,0
 FN:8,System.String BlabberApp.Domain.Blab::get_Message()
-FNDA:10,System.String BlabberApp.Domain.Blab::get_Message()
-DA:9,10
+FNDA:52,System.String BlabberApp.Domain.Blab::get_Message()
+DA:9,52
 FN:9,BlabberApp.Domain.User BlabberApp.Domain.Blab::get_user()
-FNDA:12,BlabberApp.Domain.User BlabberApp.Domain.Blab::get_user()
-DA:10,12
+FNDA:34,BlabberApp.Domain.User BlabberApp.Domain.Blab::get_user()
+DA:10,34
 FN:12,System.Void BlabberApp.Domain.Blab::.ctor()
 FNDA:0,System.Void BlabberApp.Domain.Blab::.ctor()
 DA:13,0
@@ -434,14 +434,14 @@ DA:25,0
 DA:26,0
 DA:27,0
 FN:29,System.Void BlabberApp.Domain.Blab::.ctor(System.String,BlabberApp.Domain.User)
-FNDA:8,System.Void BlabberApp.Domain.Blab::.ctor(System.String,BlabberApp.Domain.User)
-DA:30,8
-DA:31,8
-DA:32,8
-DA:33,8
-DA:34,8
-DA:35,8
-DA:36,8
+FNDA:29,System.Void BlabberApp.Domain.Blab::.ctor(System.String,BlabberApp.Domain.User)
+DA:30,29
+DA:31,29
+DA:32,29
+DA:33,29
+DA:34,29
+DA:35,29
+DA:36,29
 LF:25
 LH:10
 BRF:0
@@ -451,8 +451,8 @@ FNH:4
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.Domain\User.cs
 FN:8,System.Guid BlabberApp.Domain.User::get_Id()
-FNDA:40,System.Guid BlabberApp.Domain.User::get_Id()
-DA:9,40
+FNDA:65,System.Guid BlabberApp.Domain.User::get_Id()
+DA:9,65
 FN:9,System.DateTime BlabberApp.Domain.User::get_RegisterDTTM()
 FNDA:0,System.DateTime BlabberApp.Domain.User::get_RegisterDTTM()
 DA:10,0
@@ -460,40 +460,40 @@ FN:10,System.DateTime BlabberApp.Domain.User::get_LastLoginDTTM()
 FNDA:0,System.DateTime BlabberApp.Domain.User::get_LastLoginDTTM()
 DA:11,0
 FN:11,System.String BlabberApp.Domain.User::get_Email()
-FNDA:31,System.String BlabberApp.Domain.User::get_Email()
-DA:12,31
+FNDA:55,System.String BlabberApp.Domain.User::get_Email()
+DA:12,55
 FN:28,System.Void BlabberApp.Domain.User::ChangeEmail(System.String)
-FNDA:23,System.Void BlabberApp.Domain.User::ChangeEmail(System.String)
-DA:29,23
-DA:30,23
+FNDA:45,System.Void BlabberApp.Domain.User::ChangeEmail(System.String)
+DA:29,45
+DA:30,45
 DA:31,0
-DA:33,23
-DA:34,23
-DA:35,23
+DA:33,45
+DA:34,45
+DA:35,45
 DA:36,0
 DA:37,0
 DA:38,0
-DA:40,23
-DA:41,23
-BRDA:30,7,0,23
+DA:40,45
+DA:41,45
+BRDA:30,7,0,45
 BRDA:30,7,1,0
 BRDA:30,24,0,0
-BRDA:30,24,1,23
+BRDA:30,24,1,45
 FN:13,System.Void BlabberApp.Domain.User::.ctor()
-FNDA:7,System.Void BlabberApp.Domain.User::.ctor()
-DA:14,7
-DA:15,7
-DA:16,7
-DA:17,7
+FNDA:28,System.Void BlabberApp.Domain.User::.ctor()
+DA:14,28
+DA:15,28
+DA:16,28
+DA:17,28
 FN:17,System.Void BlabberApp.Domain.User::.ctor(System.String)
-FNDA:17,System.Void BlabberApp.Domain.User::.ctor(System.String)
-DA:18,17
-DA:19,17
-DA:20,17
-DA:21,17
-DA:22,17
-DA:23,17
-DA:26,17
+FNDA:18,System.Void BlabberApp.Domain.User::.ctor(System.String)
+DA:18,18
+DA:19,18
+DA:20,18
+DA:21,18
+DA:22,18
+DA:23,18
+DA:26,18
 LF:26
 LH:20
 BRF:4
@@ -503,43 +503,43 @@ FNH:5
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.Services\BlabFactory.cs
 FN:8,BlabberApp.DataStore.BlabAdapter BlabberApp.Services.BlabFactory::CreateBlabAdapter(BlabberApp.DataStore.IBlabPlugin,BlabberApp.DataStore.IUserPlugin)
-FNDA:7,BlabberApp.DataStore.BlabAdapter BlabberApp.Services.BlabFactory::CreateBlabAdapter(BlabberApp.DataStore.IBlabPlugin,BlabberApp.DataStore.IUserPlugin)
-DA:9,7
-DA:10,7
-DA:11,7
-DA:12,7
-DA:13,7
-DA:15,7
-DA:16,7
-DA:17,7
-BRDA:10,7,0,7
-BRDA:10,7,1,7
+FNDA:9,BlabberApp.DataStore.BlabAdapter BlabberApp.Services.BlabFactory::CreateBlabAdapter(BlabberApp.DataStore.IBlabPlugin,BlabberApp.DataStore.IUserPlugin)
+DA:9,9
+DA:10,9
+DA:11,8
+DA:12,8
+DA:13,8
+DA:15,8
+DA:16,9
+DA:17,9
+BRDA:10,7,0,8
+BRDA:10,7,1,9
 FN:19,BlabberApp.DataStore.IBlabPlugin BlabberApp.Services.BlabFactory::CreateBlabPlugin(System.String)
-FNDA:11,BlabberApp.DataStore.IBlabPlugin BlabberApp.Services.BlabFactory::CreateBlabPlugin(System.String)
-DA:20,11
-DA:21,11
+FNDA:12,BlabberApp.DataStore.IBlabPlugin BlabberApp.Services.BlabFactory::CreateBlabPlugin(System.String)
+DA:20,12
+DA:21,12
 DA:22,2
 DA:23,2
-DA:26,9
-DA:27,9
-DA:29,11
+DA:26,10
+DA:27,10
+DA:29,12
 BRDA:21,19,0,2
-BRDA:21,19,1,9
+BRDA:21,19,1,10
 FN:31,BlabberApp.Services.IBlabService BlabberApp.Services.BlabFactory::CreateBlabService(BlabberApp.DataStore.BlabAdapter,BlabberApp.DataStore.UserAdapter)
-FNDA:5,BlabberApp.Services.IBlabService BlabberApp.Services.BlabFactory::CreateBlabService(BlabberApp.DataStore.BlabAdapter,BlabberApp.DataStore.UserAdapter)
-DA:32,5
-DA:34,5
-DA:35,5
-DA:36,5
-DA:37,5
-DA:38,5
-DA:40,5
-DA:41,5
-BRDA:34,7,0,5
-BRDA:34,7,1,5
+FNDA:6,BlabberApp.Services.IBlabService BlabberApp.Services.BlabFactory::CreateBlabService(BlabberApp.DataStore.BlabAdapter,BlabberApp.DataStore.UserAdapter)
+DA:32,6
+DA:34,6
+DA:35,6
+DA:36,6
+DA:37,6
+DA:38,6
+DA:40,6
+DA:41,6
+BRDA:34,7,0,6
+BRDA:34,7,1,6
 FN:6,System.Void BlabberApp.Services.BlabFactory::.ctor()
-FNDA:11,System.Void BlabberApp.Services.BlabFactory::.ctor()
-DA:7,11
+FNDA:12,System.Void BlabberApp.Services.BlabFactory::.ctor()
+DA:7,12
 LF:24
 LH:24
 BRF:6
@@ -548,45 +548,41 @@ FNF:4
 FNH:4
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.Services\BlabService.cs
-FN:18,System.Void BlabberApp.Services.BlabService::NewBlab(System.String,System.String)
-FNDA:0,System.Void BlabberApp.Services.BlabService::NewBlab(System.String,System.String)
-DA:19,0
-DA:20,0
-DA:21,0
-FN:22,System.Void BlabberApp.Services.BlabService::NewBlab(BlabberApp.Domain.Blab)
-FNDA:2,System.Void BlabberApp.Services.BlabService::NewBlab(BlabberApp.Domain.Blab)
-DA:23,2
+FN:19,System.Void BlabberApp.Services.BlabService::NewBlab(BlabberApp.Domain.Blab)
+FNDA:3,System.Void BlabberApp.Services.BlabService::NewBlab(BlabberApp.Domain.Blab)
+DA:20,3
+DA:21,3
+DA:22,3
+FN:23,System.Collections.IEnumerable BlabberApp.Services.BlabService::GetAll()
+FNDA:2,System.Collections.IEnumerable BlabberApp.Services.BlabService::GetAll()
 DA:24,2
 DA:25,2
-FN:26,System.Collections.IEnumerable BlabberApp.Services.BlabService::GetAll()
-FNDA:2,System.Collections.IEnumerable BlabberApp.Services.BlabService::GetAll()
-DA:27,2
-DA:28,2
-DA:29,2
-FN:31,BlabberApp.Domain.Blab BlabberApp.Services.BlabService::CreateBlab(System.String,System.String)
-FNDA:2,BlabberApp.Domain.Blab BlabberApp.Services.BlabService::CreateBlab(System.String,System.String)
+DA:26,2
+FN:28,BlabberApp.Domain.Blab BlabberApp.Services.BlabService::CreateBlab(System.String,System.String)
+FNDA:3,BlabberApp.Domain.Blab BlabberApp.Services.BlabService::CreateBlab(System.String,System.String)
+DA:29,3
+DA:30,3
+DA:31,3
 DA:32,2
 DA:33,2
 DA:34,2
-DA:35,1
-DA:36,1
+DA:35,2
 DA:37,1
-DA:39,1
-DA:41,2
-BRDA:34,20,0,1
-BRDA:34,20,1,1
+DA:39,3
+BRDA:31,20,0,2
+BRDA:31,20,1,1
 FN:11,System.Void BlabberApp.Services.BlabService::.ctor(BlabberApp.DataStore.BlabAdapter,BlabberApp.DataStore.UserAdapter)
-FNDA:5,System.Void BlabberApp.Services.BlabService::.ctor(BlabberApp.DataStore.BlabAdapter,BlabberApp.DataStore.UserAdapter)
-DA:12,5
-DA:13,5
-DA:14,5
-DA:15,5
-DA:16,5
-LF:22
-LH:19
+FNDA:7,System.Void BlabberApp.Services.BlabService::.ctor(BlabberApp.DataStore.BlabAdapter,BlabberApp.DataStore.UserAdapter)
+DA:12,7
+DA:13,7
+DA:14,7
+DA:15,7
+DA:16,7
+LF:20
+LH:20
 BRF:2
 BRH:2
-FNF:5
+FNF:4
 FNH:4
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.Services\Program.cs
@@ -666,26 +662,26 @@ FNH:0
 end_of_record
 SF:C:\Users\aubre\Desktop\assignment-05-aubsparrow\BlabberApp.Services\UserFactory.cs
 FN:7,BlabberApp.DataStore.UserAdapter BlabberApp.Services.UserFactory::CreateUserAdapter(BlabberApp.DataStore.IUserPlugin)
-FNDA:13,BlabberApp.DataStore.UserAdapter BlabberApp.Services.UserFactory::CreateUserAdapter(BlabberApp.DataStore.IUserPlugin)
-DA:8,13
-DA:9,13
-DA:10,12
-DA:11,12
-DA:12,12
-DA:14,13
-DA:15,13
-BRDA:9,7,0,12
-BRDA:9,7,1,13
+FNDA:15,BlabberApp.DataStore.UserAdapter BlabberApp.Services.UserFactory::CreateUserAdapter(BlabberApp.DataStore.IUserPlugin)
+DA:8,15
+DA:9,15
+DA:10,13
+DA:11,13
+DA:12,13
+DA:14,15
+DA:15,15
+BRDA:9,7,0,13
+BRDA:9,7,1,15
 FN:16,BlabberApp.DataStore.IUserPlugin BlabberApp.Services.UserFactory::CreateUserPlugin(System.String)
-FNDA:21,BlabberApp.DataStore.IUserPlugin BlabberApp.Services.UserFactory::CreateUserPlugin(System.String)
-DA:17,21
-DA:18,21
+FNDA:23,BlabberApp.DataStore.IUserPlugin BlabberApp.Services.UserFactory::CreateUserPlugin(System.String)
+DA:17,23
+DA:18,23
 DA:19,1
 DA:20,1
-DA:23,20
-DA:24,21
+DA:23,22
+DA:24,23
 BRDA:18,19,0,1
-BRDA:18,19,1,20
+BRDA:18,19,1,22
 FN:26,BlabberApp.Services.UserService BlabberApp.Services.UserFactory::CreateUserService(BlabberApp.DataStore.UserAdapter)
 FNDA:4,BlabberApp.Services.UserService BlabberApp.Services.UserFactory::CreateUserService(BlabberApp.DataStore.UserAdapter)
 DA:27,4
